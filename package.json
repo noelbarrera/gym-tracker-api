@@ -2,10 +2,14 @@
   "name": "gym-tracker-api",
   "version": "1.0.0",
   "main": "index.js",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
-    "dev": "npx tsc -w & nodemon dist/index.js"
+    "dev": "npx tsc -w & nodemon dist/index.js",
+    "seed": "prisma db seed"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +18,11 @@
   "devDependencies": {
     "@types/node": "^22.10.1",
     "nodemon": "^3.1.7",
+    "prisma": "^5.10.2",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@prisma/client": "^6.0.1",
     "@types/express": "^5.0.0",
     "express": "^4.21.1"
   }
